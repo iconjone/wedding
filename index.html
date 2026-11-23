@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashley &amp; Jonathan — Fall 2027 · Austin, Texas</title>
+  <meta
+    name="description"
+    content="Join us in celebrating the wedding of Ashley and Jonathan in the Texas Hill Country near Austin, Fall 2027. View weekend schedule, venue updates, and save the date."
+  />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ashleyandjonathan.com/" />
+  <meta property="og:title" content="Ashley &amp; Jonathan — Wedding Celebration" />
+  <meta
+    property="og:description"
+    content="Save the Date · Fall 2027 in Austin &amp; the Texas Hill Country. Weekend schedule, venue details, and updates."
+  />
+  <meta property="og:image" content="https://ashleyandjonathan.com/assets/stationery-mood.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="canonical" href="https://ashleyandjonathan.com/" />
+
+  <!-- Editorial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Editorial Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" aria-label="Primary">
+      <a href="#top" class="nav-brand" id="nav-brand" aria-label="Ashley and Jonathan home">
+        A <em>&amp;</em> J
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#details" id="nav-link-details">Details</a></li>
+        <li><a href="#schedule" id="nav-link-schedule">Schedule</a></li>
+        <li><a href="#venue" id="nav-link-venue">Venue</a></li>
+        <li><a href="#updates" id="nav-link-updates">Coming Soon</a></li>
+      </ul>
+
+      <button type="button" class="nav-save-btn" id="nav-calendar-btn">
+        Save the Date
+      </button>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="mobile-menu-open"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <line x1="3" y1="7" x2="21" y2="7" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="17" x2="21" y2="17" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <button type="button" class="mobile-drawer-close" id="mobile-menu-close" aria-label="Close navigation menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <line x1="5" y1="5" x2="19" y2="19" />
+        <line x1="19" y1="5" x2="5" y2="19" />
+      </svg>
+    </button>
+    <a href="#details" class="drawer-link">Details</a>
+    <a href="#schedule" class="drawer-link">Schedule</a>
+    <a href="#venue" class="drawer-link">Venue</a>
+    <a href="#updates" class="drawer-link">Coming Soon</a>
+    <button type="button" class="btn btn--ivory" id="drawer-calendar-btn">Save the Date</button>
+  </div>
+
+  <main id="top">
+    <!-- Section 1: Deep Plum Blind-Embossed Hero -->
+    <section class="hero" aria-label="Wedding announcement and countdown">
+      <div class="hero-content">
+        <!-- Sculpted Ivory Botanical Wax Seal -->
+        <button
+          type="button"
+          class="wax-seal-btn"
+          id="hero-wax-seal"
+          aria-label="Scroll to invitation note"
+          title="Open invitation note"
+        >
+          <svg class="wax-seal-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="waxBody" cx="34%" cy="28%" r="72%">
+                <stop offset="0%" stop-color="#FAF6EE" />
+                <stop offset="58%" stop-color="#E9E1D2" />
+                <stop offset="88%" stop-color="#D7CCB8" />
+                <stop offset="100%" stop-color="#C4B69F" />
+              </radialGradient>
+              <radialGradient id="waxWell" cx="62%" cy="65%" r="65%">
+                <stop offset="0%" stop-color="#EFE8DB" />
+                <stop offset="70%" stop-color="#DDD3C0" />
+                <stop offset="100%" stop-color="#C7BAA4" />
+              </radialGradient>
+            </defs>
+            <!-- Organic hand-poured wax outer silhouette -->
+            <path
+              d="M61 7C78 7 92 14 102 27C112 40 115 58 109 75C103 91 89 106 71 111C53 116 33 112 20 98C8 85 5 64 11 45C17 27 32 13 49 8C53 7 57 7 61 7Z"
+              fill="url(#waxBody)"
+            />
+            <!-- Recessed stamp impression -->
+            <circle cx="60" cy="60" r="39" fill="url(#waxWell)" stroke="#F6F1E6" stroke-width="1.2" opacity="0.95" />
+            <circle cx="60" cy="60" r="35" stroke="#BCAE97" stroke-width="0.9" stroke-dasharray="1.5 2.5" />
+            <!-- Embossed botanical sprig motif -->
+            <g stroke="#9D8F79" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <path d="M60 83C60 68 61 52 60 36" />
+              <path d="M60 72C52 69 47 63 45 55C52 57 57 63 60 72Z" fill="#E6DEC9" />
+              <path d="M60 67C68 64 73 58 75 50C68 52 63 58 60 67Z" fill="#E6DEC9" />
+              <path d="M60 56C53 53 49 48 48 42C54 44 58 49 60 56Z" fill="#E6DEC9" />
+              <path d="M60 52C67 49 71 44 72 38C66 40 62 45 60 52Z" fill="#E6DEC9" />
+              <circle cx="60" cy="34" r="3" fill="#EFE8DB" />
+              <circle cx="53" cy="38" r="2.1" fill="#EFE8DB" />
+              <circle cx="67" cy="37" r="2.1" fill="#EFE8DB" />
+            </g>
+          </svg>
+        </button>
+
+        <p class="eyebrow eyebrow--ivory">Together With Their Families</p>
+
+        <h1 class="hero-names" id="hero-couple-names">
+          <span id="partner-one">Ashley</span>
+          <span class="amp" aria-hidden="true">&amp;</span>
+          <span id="partner-two">Jonathan</span>
+        </h1>
+
+        <div class="hero-meta" aria-label="Wedding season and city">
+          <span id="hero-date-label">Fall 2027</span>
+          <span class="hero-meta-dot" aria-hidden="true"></span>
+          <span id="hero-location-label">Austin, Texas</span>
+        </div>
+
+        <!-- Live Countdown -->
+        <div class="countdown-wrap" aria-label="Countdown to the wedding">
+          <div class="countdown-grid" id="countdown-grid" role="timer" aria-live="off">
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-days">---</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-hours">--</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-minutes">--</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-seconds">--</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+          <p class="countdown-caption" id="countdown-caption">
+            Counting down to Fall 2027 · Final date announced soon
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#schedule" class="btn btn--ivory" id="hero-schedule-cta">Weekend Schedule</a>
+          <button type="button" class="btn btn--ghost-ivory" id="hero-calendar-cta">Add to Calendar</button>
+        </div>
+      </div>
+
+      <a href="#details" class="scroll-cue" id="hero-scroll-cue" aria-label="Scroll to wedding details">
+        <span>Scroll</span>
+        <span class="scroll-cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- Section 2: Save the Date Welcome & Stationery Mood -->
+    <section class="section section--ivory paper-grain" id="details" aria-labelledby="details-heading">
+      <div class="container">
+        <div class="welcome-grid">
+          <figure class="stationery-frame reveal">
+            <img
+              src="assets/stationery-mood.jpg"
+              alt="Handmade ivory botanical cotton paper and deep plum blind-embossed wedding stationery sealed with an ivory wax seal"
+              width="1200"
+              height="900"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="welcome-copy reveal">
+            <p class="eyebrow">Save the Date</p>
+            <h2 class="section-heading" id="details-heading">
+              We cannot wait to <em>celebrate</em> with you.
+            </h2>
+            <p>
+              Welcome to our wedding website. We are thrilled to gather our favorite people from near
+              and far for a weekend of warmth, tradition, music, and celebration in the Texas Hill Country.
+            </p>
+            <p>
+              As we finalize our estate venue and weekend timeline, we will share every detail right here —
+              including hotel room blocks, travel tips, and formal RSVP information.
+            </p>
+
+            <ul class="glance-list" aria-label="Wedding summary">
+              <li>
+                <span class="glance-term">When</span>
+                <span class="glance-val" id="glance-date">Fall 2027</span>
+              </li>
+              <li>
+                <span class="glance-term">Where</span>
+                <span class="glance-val" id="glance-location">Austin &amp; Texas Hill Country</span>
+              </li>
+              <li>
+                <span class="glance-term">Attire</span>
+                <span class="glance-val" id="glance-attire">Formal / Traditional or Black-Tie Optional</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Weekend Schedule -->
+    <section class="section section--linen paper-grain" id="schedule" aria-labelledby="schedule-heading">
+      <div class="container">
+        <div class="section-header-centered reveal">
+          <p class="eyebrow">The Celebration</p>
+          <h2 class="section-heading" id="schedule-heading">Weekend <em>Schedule</em></h2>
+          <div class="botanical-divider" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <path d="M14 24V5" />
+              <path d="M14 19C9.5 18 7 15 6.5 11.5C10 12 12.5 15 14 19Z" />
+              <path d="M14 15.5C18.5 14.5 21 11.5 21.5 8C18 8.5 15.5 11.5 14 15.5Z" />
+              <circle cx="14" cy="4.5" r="1.4" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="schedule-timeline" id="schedule-timeline" role="list">
+          <!-- Populated cleanly from config.js with accessible fallback content -->
+          <article class="schedule-item reveal" role="listitem">
+            <div class="schedule-timing">
+              <span class="schedule-day">Evening Before</span>
+              <span class="schedule-time">Time to be announced</span>
+            </div>
+            <span class="schedule-node" aria-hidden="true"></span>
+            <div class="schedule-card">
+              <h3 class="schedule-title">Welcome Dinner</h3>
+              <p class="schedule-location">Austin, Texas</p>
+              <p class="schedule-desc">
+                An intimate evening of warm conversation, good food, and celebration to welcome family
+                and friends traveling from near and far.
+              </p>
+            </div>
+          </article>
+
+          <article class="schedule-item reveal" role="listitem">
+            <div class="schedule-timing">
+              <span class="schedule-day">Wedding Day</span>
+              <span class="schedule-time">Late Afternoon</span>
+            </div>
+            <span class="schedule-node" aria-hidden="true"></span>
+            <div class="schedule-card">
+              <h3 class="schedule-title">The Ceremony</h3>
+              <p class="schedule-location">Texas Hill Country · Venue TBA</p>
+              <p class="schedule-desc">
+                Join us beneath the Texas Hill Country sky as we exchange our vows surrounded by the
+                people we love most.
+              </p>
+            </div>
+          </article>
+
+          <article class="schedule-item reveal" role="listitem">
+            <div class="schedule-timing">
+              <span class="schedule-day">Wedding Day</span>
+              <span class="schedule-time">Following the Ceremony</span>
+            </div>
+            <span class="schedule-node" aria-hidden="true"></span>
+            <div class="schedule-card">
+              <h3 class="schedule-title">Cocktail Hour</h3>
+              <p class="schedule-location">Courtyard &amp; Terrace</p>
+              <p class="schedule-desc">
+                Golden hour drinks, passed hors d&rsquo;oeuvres, and music on the terrace while we
+                capture sunset portraits.
+              </p>
+            </div>
+          </article>
+
+          <article class="schedule-item reveal" role="listitem">
+            <div class="schedule-timing">
+              <span class="schedule-day">Wedding Day</span>
+              <span class="schedule-time">Evening Reception</span>
+            </div>
+            <span class="schedule-node" aria-hidden="true"></span>
+            <div class="schedule-card">
+              <h3 class="schedule-title">Dinner &amp; Dancing</h3>
+              <p class="schedule-location">Reception Hall &amp; Courtyard</p>
+              <p class="schedule-desc">
+                A candlelit dinner, heartfelt toasts, and a full dance floor celebrating late into
+                the Texas evening.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <p class="schedule-footnote reveal" id="schedule-footnote">
+          Exact times and formal invitation details will be shared here once our venue and date are finalized.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: The Venue -->
+    <section class="section section--ivory paper-grain" id="venue" aria-labelledby="venue-heading">
+      <div class="container">
+        <div class="section-header-centered reveal">
+          <p class="eyebrow">The Setting</p>
+          <h2 class="section-heading" id="venue-heading">Venue <em>&amp;</em> Location</h2>
+          <div class="botanical-divider" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <path d="M14 24V5" />
+              <path d="M14 19C9.5 18 7 15 6.5 11.5C10 12 12.5 15 14 19Z" />
+              <path d="M14 15.5C18.5 14.5 21 11.5 21.5 8C18 8.5 15.5 11.5 14 15.5Z" />
+              <circle cx="14" cy="4.5" r="1.4" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+
+        <article class="venue-card reveal">
+          <div class="venue-media">
+            <img
+              src="assets/hill-country-venue.jpg"
+              alt="Texas Hill Country limestone courtyard under live oaks strung with candles and warm bistro lights"
+              width="1200"
+              height="800"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="venue-body">
+            <span class="venue-status" id="venue-status">Venue Announcement Coming Soon</span>
+            <h3 class="venue-name" id="venue-name">Texas Hill Country Estate</h3>
+            <p class="venue-address" id="venue-address">Greater Austin &amp; Hill Country, Texas</p>
+            <p class="venue-description" id="venue-description">
+              We are currently touring our favorite estates nestled among the rolling hills, limestone
+              courtyards, and ancient live oaks of the Texas Hill Country just outside Austin. As soon
+              as our venue is finalized, full address, driving directions, parking, and nearby hotel
+              blocks will be shared right here.
+            </p>
+
+            <div class="venue-meta">
+              <div>
+                <strong>Nearest Airport</strong>
+                <span id="venue-airport">Austin-Bergstrom International Airport (AUS)</span>
+              </div>
+              <div>
+                <strong>Accommodations</strong>
+                <span>Curated hotel room blocks will be announced with our venue</span>
+              </div>
+            </div>
+
+            <div class="venue-actions">
+              <a
+                href="#venue"
+                class="btn btn--plum"
+                id="venue-map-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-disabled="true"
+              >
+                Directions Coming Soon
+              </a>
+              <button type="button" class="btn btn--outline-plum" id="venue-calendar-btn">
+                Save the Date (.ics)
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 5: Coming Next Expansion Band -->
+    <section class="expansion-band" id="updates" aria-labelledby="updates-heading">
+      <div class="container">
+        <p class="eyebrow eyebrow--ivory reveal">More to Follow</p>
+        <h2 class="section-heading section-heading--ivory reveal" id="updates-heading">
+          Check Back as Plans <em>Unfold</em>
+        </h2>
+        <div class="botanical-divider botanical-divider--ivory reveal" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+            <path d="M14 24V5" />
+            <path d="M14 19C9.5 18 7 15 6.5 11.5C10 12 12.5 15 14 19Z" />
+            <path d="M14 15.5C18.5 14.5 21 11.5 21.5 8C18 8.5 15.5 11.5 14 15.5Z" />
+            <circle cx="14" cy="4.5" r="1.4" fill="currentColor" />
+          </svg>
+        </div>
+
+        <div class="coming-soon-grid reveal">
+          <div class="coming-soon-item">
+            <span class="coming-soon-num">01</span>
+            <h3>Our Story</h3>
+            <p>Engagement photos and favorite memories along the road to Austin.</p>
+          </div>
+          <div class="coming-soon-item">
+            <span class="coming-soon-num">02</span>
+            <h3>Travel &amp; Stay</h3>
+            <p>Reserved hotel blocks, airport transit, and favorite Hill Country spots.</p>
+          </div>
+          <div class="coming-soon-item">
+            <span class="coming-soon-num">03</span>
+            <h3>Registry &amp; FAQ</h3>
+            <p>Answers for guests, dress code notes, and registry details.</p>
+          </div>
+          <div class="coming-soon-item">
+            <span class="coming-soon-num">04</span>
+            <h3>Online RSVP</h3>
+            <p>Easy digital RSVP, meal preferences, and song requests with formal invites.</p>
+          </div>
+        </div>
+
+        <div class="share-row reveal">
+          <button type="button" class="btn btn--ivory" id="copy-link-btn">
+            Copy Website Link
+          </button>
+          <a href="mailto:ashleyandjonathansamuel@gmail.com" class="btn btn--ghost-ivory" id="contact-couple-btn">
+            Email Ashley &amp; Jonathan
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer paper-grain">
+    <div class="container">
+      <p class="footer-monogram">A <em>&amp;</em> J</p>
+      <p class="footer-meta" id="footer-meta">Ashley &amp; Jonathan · Fall 2027 · Austin, Texas</p>
+      <p class="footer-domain">ashleyandjonathan.com</p>
+    </div>
+  </footer>
+
+  <!-- Accessible Live Feedback Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

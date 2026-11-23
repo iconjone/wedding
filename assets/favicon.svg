@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="wax" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F6F1E7"/>
+      <stop offset="65%" stop-color="#E6DEC9"/>
+      <stop offset="100%" stop-color="#CFC4B0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#2C151F"/>
+  <path d="M32 7C42 7 49 11 53 19C57 27 56 38 51 46C46 54 38 57 29 56C19 55 11 49 9 39C7 29 10 18 17 12C22 8 27 7 32 7Z" fill="url(#wax)"/>
+  <circle cx="32" cy="32" r="19" fill="none" stroke="#C5B9A4" stroke-width="1.2"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#2C151F" letter-spacing="0.5">A&amp;J</text>
+</svg>

@@ -1,0 +1,1226 @@
+/* ==========================================================================
+   Ashley & Jonathan — Editorial Botanical Wedding Theme
+   Inspired by deep blind-embossed aubergine plum, handmade cotton ivory paper,
+   muted sage botanical illustrations, and warm ivory wax seals.
+   ========================================================================== */
+
+:root {
+  /* Core Palette — sampled directly from mood board */
+  --bg-ivory: #f4efe6;
+  --bg-linen: #ece5d8;
+  --bg-paper: #faf7f1;
+  --plum-deep: #2a141d;
+  --plum-rich: #3b1c29;
+  --plum-mid: #4e2738;
+  --plum-soft: #6c3e52;
+  --sage-deep: #5a674d;
+  --sage-mid: #788569;
+  --sage-light: #a6b099;
+  --sage-wash: rgba(120, 133, 105, 0.12);
+  --wax-light: #f3ede2;
+  --wax-mid: #e5dccb;
+  --wax-shadow: #c7bba6;
+
+  /* Ink & Borders */
+  --ink-primary: #291820;
+  --ink-secondary: #5a4c51;
+  --ink-muted: #786a6e;
+  --ink-ivory: #f6f1e8;
+  --ink-ivory-soft: rgba(246, 241, 232, 0.8);
+  --ink-ivory-faint: rgba(246, 241, 232, 0.56);
+
+  --border-hairline: rgba(59, 28, 41, 0.14);
+  --border-strong: rgba(59, 28, 41, 0.28);
+  --border-ivory: rgba(246, 241, 232, 0.22);
+  --border-ivory-strong: rgba(246, 241, 232, 0.42);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --font-sans: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Layout & Rhythm */
+  --max-width: 1120px;
+  --nav-height: 76px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --shadow-paper: 0 22px 54px -26px rgba(42, 20, 29, 0.22), 0 4px 16px -6px rgba(42, 20, 29, 0.08);
+  --shadow-wax: 0 12px 26px rgba(14, 5, 9, 0.48), 0 3px 8px rgba(14, 5, 9, 0.35);
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-ivory);
+  color: var(--ink-primary);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.72;
+  color: var(--ink-primary);
+  background-color: var(--bg-ivory);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Subtle cotton-rag paper texture overlay across light sections */
+.paper-grain {
+  position: relative;
+}
+
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.38;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.paper-grain > * {
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sage-mid);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  width: min(100% - 2.5rem, var(--max-width));
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   Typography Helpers
+   ========================================================================== */
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  margin: 0 0 0.85rem;
+}
+
+.eyebrow--ivory {
+  color: var(--ink-ivory-soft);
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.15rem, 4.2vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.015em;
+  color: var(--plum-deep);
+  margin: 0;
+}
+
+.section-heading em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.section-heading--ivory {
+  color: var(--ink-ivory);
+}
+
+.section-lead {
+  font-size: 1.02rem;
+  color: var(--ink-secondary);
+  max-width: 58ch;
+  margin: 1rem 0 0;
+}
+
+/* Botanical Divider */
+.botanical-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.15rem;
+  margin: 1.5rem auto 0;
+  max-width: 260px;
+}
+
+.botanical-divider::before,
+.botanical-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-hairline);
+}
+
+.botanical-divider--ivory::before,
+.botanical-divider--ivory::after {
+  background: var(--border-ivory);
+}
+
+.botanical-divider svg {
+  width: 24px;
+  height: 24px;
+  color: var(--sage-mid);
+  flex-shrink: 0;
+}
+
+.botanical-divider--ivory svg {
+  color: var(--wax-mid);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  transition:
+    background-color 280ms var(--ease-editorial),
+    color 280ms var(--ease-editorial),
+    border-color 280ms var(--ease-editorial),
+    transform 280ms var(--ease-editorial),
+    box-shadow 280ms var(--ease-editorial);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--ivory {
+  background-color: var(--bg-ivory);
+  color: var(--plum-deep);
+  border-color: var(--bg-ivory);
+}
+
+.btn--ivory:hover {
+  background-color: #ffffff;
+  box-shadow: 0 10px 26px rgba(15, 5, 9, 0.28);
+}
+
+.btn--ghost-ivory {
+  background-color: rgba(42, 20, 29, 0.25);
+  color: var(--ink-ivory);
+  border-color: var(--border-ivory-strong);
+  backdrop-filter: blur(4px);
+}
+
+.btn--ghost-ivory:hover {
+  background-color: rgba(246, 241, 232, 0.12);
+  border-color: var(--ink-ivory);
+}
+
+.btn--plum {
+  background-color: var(--plum-deep);
+  color: var(--ink-ivory);
+  border-color: var(--plum-deep);
+}
+
+.btn--plum:hover {
+  background-color: var(--plum-rich);
+  box-shadow: 0 10px 24px rgba(42, 20, 29, 0.2);
+}
+
+.btn--outline-plum {
+  background-color: transparent;
+  color: var(--plum-deep);
+  border-color: var(--border-strong);
+}
+
+.btn--outline-plum:hover {
+  background-color: var(--plum-deep);
+  color: var(--ink-ivory);
+  border-color: var(--plum-deep);
+}
+
+.btn[aria-disabled="true"] {
+  opacity: 0.65;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Navigation Header
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  color: var(--ink-ivory);
+  transition:
+    background-color 360ms var(--ease-editorial),
+    color 360ms var(--ease-editorial),
+    border-color 360ms var(--ease-editorial),
+    box-shadow 360ms var(--ease-editorial);
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.is-scrolled {
+  background-color: rgba(244, 239, 230, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--plum-deep);
+  border-bottom-color: var(--border-hairline);
+  box-shadow: 0 6px 24px -16px rgba(42, 20, 29, 0.2);
+}
+
+.nav-inner {
+  width: min(100% - 2.5rem, var(--max-width));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.nav-brand {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-brand em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.35rem 0;
+  opacity: 0.88;
+  transition: opacity 220ms ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 280ms var(--ease-editorial);
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-save-btn {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-xs);
+  opacity: 0.9;
+  transition: background-color 240ms ease, color 240ms ease, opacity 240ms ease;
+}
+
+.nav-save-btn:hover {
+  opacity: 1;
+  background-color: var(--ink-ivory);
+  color: var(--plum-deep);
+}
+
+.site-header.is-scrolled .nav-save-btn:hover {
+  background-color: var(--plum-deep);
+  color: var(--ink-ivory);
+}
+
+/* Mobile Menu Button */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-xs);
+  color: inherit;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background-color: var(--plum-deep);
+  color: var(--ink-ivory);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 320ms var(--ease-editorial), visibility 320ms;
+}
+
+.mobile-drawer.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer a {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+}
+
+.mobile-drawer-close {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.5rem;
+  background: transparent;
+  border: 1px solid var(--border-ivory-strong);
+  color: var(--ink-ivory);
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-xs);
+  display: grid;
+  place-items: center;
+}
+
+/* ==========================================================================
+   Section 1 — Blind-Embossed Deep Plum Hero
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--nav-height) + 3.25rem) 1.5rem 4.5rem;
+  background-color: var(--plum-deep);
+  background-image:
+    radial-gradient(ellipse 68% 66% at 50% 48%, rgba(42, 20, 29, 0.56) 0%, rgba(33, 14, 22, 0.82) 100%),
+    url("assets/hero-plum-botanical.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--ink-ivory);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Fine engraved inset hairline border framing the hero like letterpress stationery */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 1.25rem;
+  border: 1px solid rgba(246, 241, 232, 0.14);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ivory Wax Seal Monogram */
+.wax-seal-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 1.9rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 420ms var(--ease-editorial);
+}
+
+.wax-seal-btn:hover {
+  transform: scale(1.045) rotate(-2deg);
+}
+
+.wax-seal-svg {
+  width: 78px;
+  height: 78px;
+  filter: drop-shadow(0 12px 22px rgba(12, 4, 8, 0.55));
+}
+
+.hero-names {
+  font-family: var(--font-serif);
+  font-size: clamp(3.15rem, 7.6vw, 6.2rem);
+  font-weight: 300;
+  line-height: 1.03;
+  letter-spacing: 0.025em;
+  color: var(--ink-ivory);
+  margin: 0.25rem 0 0;
+}
+
+.hero-names .amp {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--wax-mid);
+  padding-inline: 0.16em;
+  font-size: 0.88em;
+}
+
+.hero-meta {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem 1.35rem;
+  margin-top: 1.55rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--border-ivory);
+  border-bottom: 1px solid var(--border-ivory);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-ivory-soft);
+}
+
+.hero-meta-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--wax-mid);
+  opacity: 0.75;
+}
+
+/* Heirloom Countdown */
+.countdown-wrap {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 580px;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.5rem;
+  position: relative;
+}
+
+.countdown-unit:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 22%;
+  bottom: 22%;
+  width: 1px;
+  background-color: var(--border-ivory);
+}
+
+.countdown-value {
+  font-family: var(--font-serif);
+  font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+  color: var(--ink-ivory);
+}
+
+.countdown-label {
+  margin-top: 0.35rem;
+  font-size: 0.67rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-ivory-faint);
+}
+
+.countdown-caption {
+  margin: 1.15rem 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-ivory-soft);
+}
+
+.hero-actions {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink-ivory-faint);
+  transition: color 220ms ease;
+}
+
+.scroll-cue:hover {
+  color: var(--ink-ivory);
+}
+
+.scroll-cue-line {
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(to bottom, rgba(246, 241, 232, 0.7), rgba(246, 241, 232, 0));
+}
+
+/* ==========================================================================
+   Section 2 — Invitation Welcome & Stationery Spread
+   ========================================================================== */
+
+.section {
+  padding: clamp(4.5rem, 8.5vw, 7.5rem) 0;
+}
+
+.section--linen {
+  background-color: var(--bg-linen);
+}
+
+.section--ivory {
+  background-color: var(--bg-ivory);
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+  gap: clamp(2.4rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.stationery-frame {
+  position: relative;
+  padding: 0.9rem;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-paper);
+}
+
+.stationery-frame img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.welcome-copy p {
+  margin: 1.25rem 0 0;
+  color: var(--ink-secondary);
+  font-size: 1.02rem;
+}
+
+.glance-list {
+  margin: 2.1rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.glance-list li {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 1rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--border-hairline);
+  align-items: baseline;
+}
+
+.glance-term {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 400;
+}
+
+.glance-val {
+  font-family: var(--font-serif);
+  font-size: 1.24rem;
+  color: var(--plum-deep);
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   Section 3 — Weekend Schedule Timeline
+   ========================================================================== */
+
+.section-header-centered {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: clamp(3rem, 5.5vw, 4.4rem);
+}
+
+.schedule-timeline {
+  position: relative;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.schedule-timeline::before {
+  content: "";
+  position: absolute;
+  left: 196px;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--border-strong) 8%,
+    var(--border-strong) 92%,
+    transparent 100%
+  );
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 196px 1fr;
+  gap: 2.6rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.schedule-item:not(:last-child) {
+  border-bottom: 1px solid rgba(59, 28, 41, 0.08);
+}
+
+.schedule-timing {
+  text-align: right;
+  padding-right: 1.85rem;
+  padding-top: 0.2rem;
+}
+
+.schedule-day {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  margin-bottom: 0.35rem;
+}
+
+.schedule-time {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-style: italic;
+  color: var(--plum-rich);
+}
+
+/* Botanical timeline marker */
+.schedule-node {
+  position: absolute;
+  left: 196px;
+  top: 2.5rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--bg-linen);
+  border: 1.5px solid var(--plum-rich);
+  transform: translateX(-50%);
+  transition: background-color 260ms ease, transform 260ms ease;
+}
+
+.schedule-item:hover .schedule-node {
+  background-color: var(--sage-deep);
+  border-color: var(--sage-deep);
+  transform: translateX(-50%) scale(1.2);
+}
+
+.schedule-card {
+  padding-left: 0.25rem;
+}
+
+.schedule-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2.5vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--plum-deep);
+  margin: 0;
+}
+
+.schedule-location {
+  margin: 0.35rem 0 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+}
+
+.schedule-desc {
+  margin: 0.75rem 0 0;
+  color: var(--ink-secondary);
+  font-size: 0.98rem;
+  max-width: 54ch;
+}
+
+.schedule-footnote {
+  margin: 2.8rem auto 0;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  max-width: 54ch;
+}
+
+/* ==========================================================================
+   Section 4 — The Venue (Austin & Texas Hill Country)
+   ========================================================================== */
+
+.venue-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  background-color: var(--bg-paper);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-paper);
+  overflow: hidden;
+}
+
+.venue-media {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.venue-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 900ms var(--ease-editorial);
+}
+
+.venue-card:hover .venue-media img {
+  transform: scale(1.03);
+}
+
+.venue-body {
+  padding: clamp(2rem, 4.5vw, 3.6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.venue-status {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  margin-bottom: 0.7rem;
+}
+
+.venue-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 3.2vw, 2.55rem);
+  font-weight: 400;
+  line-height: 1.14;
+  color: var(--plum-deep);
+  margin: 0;
+}
+
+.venue-address {
+  margin: 0.5rem 0 0;
+  font-size: 0.84rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.venue-description {
+  margin: 1.35rem 0 0;
+  color: var(--ink-secondary);
+  font-size: 0.98rem;
+}
+
+.venue-meta {
+  margin: 1.65rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+}
+
+.venue-meta strong {
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  margin-right: 0.5rem;
+}
+
+.venue-actions {
+  margin-top: 1.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+/* ==========================================================================
+   Section 5 — More to Come (Deep Plum Band)
+   ========================================================================== */
+
+.expansion-band {
+  position: relative;
+  background-color: var(--plum-deep);
+  background-image:
+    radial-gradient(ellipse 75% 85% at 50% 50%, rgba(42, 20, 29, 0.74) 0%, rgba(33, 14, 22, 0.92) 100%),
+    url("assets/hero-plum-botanical.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--ink-ivory);
+  padding: clamp(4.2rem, 7vw, 6.2rem) 0;
+  text-align: center;
+}
+
+.coming-soon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2.6rem auto 0;
+  max-width: 920px;
+}
+
+.coming-soon-item {
+  padding: 1.65rem 1.2rem;
+  border: 1px solid var(--border-ivory);
+  background-color: rgba(42, 20, 29, 0.42);
+  backdrop-filter: blur(4px);
+  transition: border-color 280ms ease, background-color 280ms ease;
+}
+
+.coming-soon-item:hover {
+  border-color: var(--border-ivory-strong);
+  background-color: rgba(59, 28, 41, 0.58);
+}
+
+.coming-soon-num {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--wax-mid);
+  margin-bottom: 0.45rem;
+}
+
+.coming-soon-item h3 {
+  font-family: var(--font-serif);
+  font-size: 1.38rem;
+  font-weight: 400;
+  color: var(--ink-ivory);
+  margin: 0 0 0.45rem;
+}
+
+.coming-soon-item p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--ink-ivory-soft);
+}
+
+.share-row {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--bg-ivory);
+  padding: 3.75rem 0 3.25rem;
+  text-align: center;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.footer-monogram {
+  font-family: var(--font-serif);
+  font-size: 2.15rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: var(--plum-deep);
+  margin: 0;
+}
+
+.footer-monogram em {
+  font-style: italic;
+}
+
+.footer-meta {
+  margin: 0.65rem 0 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+}
+
+.footer-domain {
+  margin: 0.9rem 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   Toast Feedback
+   ========================================================================== */
+
+.toast {
+  position: fixed;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(16px);
+  background-color: var(--plum-deep);
+  color: var(--ink-ivory);
+  border: 1px solid var(--border-ivory-strong);
+  padding: 0.8rem 1.45rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 14px 36px rgba(20, 8, 13, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 200;
+  transition: opacity 260ms ease, transform 260ms var(--ease-editorial), visibility 260ms;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================================
+   Scroll Reveal Animations
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 720ms var(--ease-editorial), transform 720ms var(--ease-editorial);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .welcome-grid,
+  .venue-card {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-media {
+    min-height: 280px;
+    aspect-ratio: 16 / 10;
+  }
+
+  .coming-soon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-links,
+  .nav-save-btn {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .hero::after {
+    inset: 0.7rem;
+  }
+
+  .countdown-grid {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+
+  .schedule-timeline::before {
+    left: 10px;
+  }
+
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+    padding: 1.55rem 0 1.55rem 2.15rem;
+  }
+
+  .schedule-timing {
+    text-align: left;
+    padding-right: 0;
+    padding-top: 0;
+  }
+
+  .schedule-node {
+    left: 10px;
+    top: 1.95rem;
+  }
+
+  .schedule-card {
+    padding-left: 0;
+  }
+
+  .glance-list li {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .coming-soon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 290px;
+  }
+}
