@@ -6,8 +6,8 @@
       <stop offset="100%" stop-color="#CFC4B0"/>
     </radialGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#2C151F"/>
+  <rect width="64" height="64" rx="14" fill="#460D16"/>
   <path d="M32 7C42 7 49 11 53 19C57 27 56 38 51 46C46 54 38 57 29 56C19 55 11 49 9 39C7 29 10 18 17 12C22 8 27 7 32 7Z" fill="url(#wax)"/>
   <circle cx="32" cy="32" r="19" fill="none" stroke="#C5B9A4" stroke-width="1.2"/>
-  <text x="32" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#2C151F" letter-spacing="0.5">A&amp;J</text>
+  <text x="32" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#460D16" letter-spacing="0.5">A&amp;J</text>
 </svg>

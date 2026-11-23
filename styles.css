@@ -5,36 +5,36 @@
    ========================================================================== */
 
 :root {
-  /* Core Palette — Directly from "wedding mood board" (Deep Maroon · Olive Green · Walnut · Cream Quartz) */
+  /* Core Palette — Deep Burgundy · Olive Green · Walnut · Cream Quartz */
   --bg-ivory: #efe8dc;         /* Cream Quartz canvas */
   --bg-linen: #e5dccd;         /* Warm stone parchment */
   --bg-paper: #f7f2ea;         /* Fine cotton stationery */
-  --plum-deep: #36121a;        /* Deep Maroon shadow */
-  --plum-rich: #4c1a24;        /* Deep Maroon primary */
-  --plum-mid: #612430;         /* Merlot velvet accent */
-  --plum-soft: #7a3846;        /* Muted wine highlight */
-  --sage-deep: #464c2d;        /* Deep Olive Green */
-  --sage-mid: #5d633e;         /* Mossy Olive Green */
-  --sage-light: #8d926e;       /* Soft olive foliage */
-  --sage-wash: rgba(70, 76, 45, 0.12);
-  --walnut: #624129;           /* Warm Heirloom Walnut */
-  --walnut-soft: #856145;      /* Antique Walnut highlight */
+  --plum-deep: #3d0b13;        /* Deep Wine Burgundy */
+  --plum-rich: #56111c;        /* Rich Velvet Burgundy */
+  --plum-mid: #6d1825;         /* Merlot Burgundy hover */
+  --plum-soft: #852835;        /* Soft Wine accent */
+  --sage-deep: #434a2b;        /* Deep Olive Green */
+  --sage-mid: #5b623d;         /* Mossy Olive Green */
+  --sage-light: #8b916c;       /* Soft olive foliage */
+  --sage-wash: rgba(67, 74, 43, 0.12);
+  --walnut: #5f3e26;           /* Warm Heirloom Walnut */
+  --walnut-soft: #825d41;      /* Antique Walnut highlight */
   --wax-light: #f3ede2;
   --wax-mid: #e6ddce;
   --wax-shadow: #c7bba6;
 
   /* Ink & Borders */
-  --ink-primary: #2a171b;
-  --ink-secondary: #584744;
-  --ink-muted: #76655e;
+  --ink-primary: #2d1215;
+  --ink-secondary: #584340;
+  --ink-muted: #76625c;
   --ink-ivory: #f6f0e6;
-  --ink-ivory-soft: rgba(246, 240, 230, 0.82);
-  --ink-ivory-faint: rgba(246, 240, 230, 0.58);
+  --ink-ivory-soft: rgba(246, 240, 230, 0.84);
+  --ink-ivory-faint: rgba(246, 240, 230, 0.6);
 
-  --border-hairline: rgba(98, 65, 41, 0.18);
-  --border-strong: rgba(76, 26, 36, 0.3);
+  --border-hairline: rgba(95, 62, 38, 0.18);
+  --border-strong: rgba(86, 17, 28, 0.32);
   --border-ivory: rgba(246, 240, 230, 0.24);
-  --border-ivory-strong: rgba(246, 240, 230, 0.45);
+  --border-ivory-strong: rgba(246, 240, 230, 0.46);
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
@@ -45,8 +45,8 @@
   --nav-height: 76px;
   --radius-xs: 2px;
   --radius-sm: 4px;
-  --shadow-paper: 0 22px 54px -26px rgba(54, 18, 26, 0.24), 0 4px 16px -6px rgba(54, 18, 26, 0.09);
-  --shadow-wax: 0 12px 26px rgba(18, 5, 9, 0.5), 0 3px 8px rgba(18, 5, 9, 0.35);
+  --shadow-paper: 0 22px 54px -26px rgba(61, 11, 19, 0.25), 0 4px 16px -6px rgba(61, 11, 19, 0.1);
+  --shadow-wax: 0 12px 26px rgba(24, 4, 7, 0.52), 0 3px 8px rgba(24, 4, 7, 0.36);
   --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -473,7 +473,7 @@ button {
 }
 
 /* ==========================================================================
-   Section 1 — Blind-Embossed Deep Plum Hero
+   Section 1 — Blind-Embossed Deep Burgundy Hero
    ========================================================================== */
 
 .hero {
@@ -485,8 +485,8 @@ button {
   padding: calc(var(--nav-height) + 3.25rem) 1.5rem 4.5rem;
   background-color: var(--plum-deep);
   background-image:
-    radial-gradient(ellipse 68% 66% at 50% 48%, rgba(42, 20, 29, 0.56) 0%, rgba(33, 14, 22, 0.82) 100%),
-    url("assets/hero-plum-botanical.jpg");
+    radial-gradient(ellipse 64% 64% at 50% 48%, rgba(61, 11, 19, 0.34) 0%, rgba(42, 6, 12, 0.64) 100%),
+    url("assets/hero-burgundy-botanical.jpg");
   background-size: cover;
   background-position: center;
   color: var(--ink-ivory);
@@ -985,15 +985,15 @@ button {
 }
 
 /* ==========================================================================
-   Section 5 — More to Come (Deep Plum Band)
+   Section 5 — More to Come (Deep Burgundy Band)
    ========================================================================== */
 
 .expansion-band {
   position: relative;
   background-color: var(--plum-deep);
   background-image:
-    radial-gradient(ellipse 75% 85% at 50% 50%, rgba(42, 20, 29, 0.74) 0%, rgba(33, 14, 22, 0.92) 100%),
-    url("assets/hero-plum-botanical.jpg");
+    radial-gradient(ellipse 75% 85% at 50% 50%, rgba(61, 11, 19, 0.62) 0%, rgba(38, 6, 11, 0.86) 100%),
+    url("assets/hero-burgundy-botanical.jpg");
   background-size: cover;
   background-position: center;
   color: var(--ink-ivory);
@@ -1012,14 +1012,14 @@ button {
 .coming-soon-item {
   padding: 1.65rem 1.2rem;
   border: 1px solid var(--border-ivory);
-  background-color: rgba(42, 20, 29, 0.42);
+  background-color: rgba(61, 11, 19, 0.48);
   backdrop-filter: blur(4px);
   transition: border-color 280ms ease, background-color 280ms ease;
 }
 
 .coming-soon-item:hover {
   border-color: var(--border-ivory-strong);
-  background-color: rgba(59, 28, 41, 0.58);
+  background-color: rgba(86, 17, 28, 0.65);
 }
 
 .coming-soon-num {
